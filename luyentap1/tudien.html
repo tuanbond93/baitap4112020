@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="tienganh"> </input>
+    <input type="button" onclick="timkiem()" value="Tìm kiếm"> </input>
+    <p id="phatngon"></p>
+    <script>
+        let search = document.getElementById("tienganh").value;
+        let tienganh = ["dog","cat","pig","chicken"];
+        let tiengviet = ["chó","mèo","lợn","gà"];
+        function timkiem() {
+        for (let i=0; i<= tienganh.length;i++) {
+            if (document.getElementById("tienganh").value == tienganh[i]) {
+                document.getElementById("phatngon").innerHTML = tiengviet[i];
+                break;
+            }
+            else{
+            document.getElementById("phatngon").innerHTML = "Không tìm thấy từ cần tìm";
+            }
+        }
+        }
+    </script>
+</body>
+</html>
